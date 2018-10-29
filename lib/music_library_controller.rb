@@ -91,7 +91,7 @@ class MusicLibraryController
     command = gets.strip
     MusicLibraryController.new
     long_song_list = Dir.glob("#{path}/*.mp3").collect{|f| f.gsub("#{path}/","")}
-    long_song_list >> "Real Estate - Wonder Years - dream pop.mp3"
+    long_song_list << "Real Estate - Wonder Years - dream pop.mp3"
     title = long_song_list.map{|title| title.gsub(".mp3", "")}
     artist_name = []
     name = []
